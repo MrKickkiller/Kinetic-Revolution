@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import kineticrevolution.KineticRevolution;
+import kineticrevolution.core.CTabs;
 import kineticrevolution.lib.Reference;
 
 /**
@@ -21,10 +21,18 @@ public class ItemBase extends Item {
 	}
 
 	public ItemBase(String name, String texture) {
-		this(name, name, texture, KineticRevolution.MAIN_TAB);
+		this(name, name, texture, CTabs.MAIN_TAB);
+	}
+
+	public ItemBase(String name, String texture, CreativeTabs tab) {
+		this(name, name, texture, tab);
 	}
 
 	public ItemBase(String name) {
 		this(name, name);
+	}
+
+	public ItemBase(String name, CreativeTabs tab) {
+		this(name, name, tab);
 	}
 }
